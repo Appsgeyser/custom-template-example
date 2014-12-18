@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+    <script src="settings.js"></script>
+	<style>body{background-color:white;}</style>
+</head>
+<body>
+<h1>This is a test app built on custom test template!</h1>
+<div>Here's all your data:</div>
+<script>document.write(JSON.stringify(Settings));</script>
+<img id="img1" style="width:72px">
+<script>document.getElementById('img1').src=Settings.icon;</script>
+<img id="img2" style="width:72px">
+<script>document.getElementById('img2').src=Settings.image;</script>
+<img id="img3" style="width:72px">
+<script>document.getElementById('img3').src=Settings.imageSelect2;</script>
+</body>
+</html>

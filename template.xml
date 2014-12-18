@@ -1,0 +1,39 @@
+<template name="testTemplate"
+           caption="Template for test"
+           keywords="template, test, developer"
+           screenshot="/screenshot.png"
+           orientation="user" >
+	<description>This is a <b>test</b> of the new template system.<br/> Isn't it <b>awesome</b>?</description>
+	<injectJS>
+		<script pattern="*" file="test.js"/>
+	</injectJS>
+    <textField name="text" label="Enter text:" required="false" minLength="1" maxLength="40" />
+	<label>Think <b>twice</b>, this text must be the coolest text you can think of.</label>
+    <textField name="textNumber" label="Enter number:" validate="number" required="false" min="0" max="10" value="5" />
+	<label>Your number should be less then 10</label>
+	<textField name="textUrl" label="Enter url:" validate="url" required="false"/>
+	<textArea name="textArea" label="Text area:" required="false" />
+	<image name="image" label="Upload image: " required="false" resizeWidth="200"/>
+	<comboGroup name="radio1" label="Select the best: " value="1">
+		<comboBox label="The first" value="1" />
+		<comboBox label="The second" value="2" />
+		<comboBox label="The third" value="3" />
+		<comboBox label="None of them" value="none" />
+	</comboGroup>
+	<group name="group1" label="All main values are here: ">
+		<textField name="text2" label="Enter cool text:" required="false" minLength="1" maxLength="40" />
+	</group>
+	<imageSelect name="imageSelect1" type="select" label="Select image" >
+		<imageOption src="/1.png" value="1"/>
+		<imageOption src="/2.png" value="2"/>
+		<imageOption src="/3.png" value="3"/>
+	</imageSelect>
+	<imageSelect name="imageSelect2" type="image" upload="true" label="Select another image" >
+		<imageOption src="/1.png" value="1"/>
+		<imageOption src="/2.png" value="2"/>
+		<imageOption src="/3.png" value="3"/>
+	</imageSelect>
+	<spoiler name="spoiler1" label="Additional values">
+		<textField name="text3" label="Enter text:" required="false" minLength="1" maxLength="40" />
+	</spoiler>
+</template>
